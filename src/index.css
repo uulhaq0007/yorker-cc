@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-[17px] leading-[1.65] text-body antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tightest text-ink;
+    line-height: 1.14;
+  }
+  ::selection {
+    @apply bg-accent text-white;
+  }
+  ::-webkit-scrollbar { width: 9px; }
+  ::-webkit-scrollbar-track { @apply bg-band; }
+  ::-webkit-scrollbar-thumb { background: #c3c3c0; border-radius: 9px; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-accent; }
+}
+
+@layer components {
+  /* Pill buttons, matching the theme's 13px / 600 / 1.3px-tracked caps */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-9 py-[15px]
+           font-display text-[13px] font-semibold uppercase leading-5 tracking-[1.3px]
+           transition-all duration-300;
+  }
+  .btn-accent {
+    @apply btn bg-accent text-white hover:bg-ink;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-white hover:bg-accent;
+  }
+  .btn-ghost {
+    @apply btn border border-white/35 text-white hover:border-accent hover:bg-accent;
+  }
+  .btn-outline {
+    @apply btn border border-ink/20 text-ink hover:border-accent hover:bg-accent hover:text-white;
+  }
+
+  .eyebrow {
+    @apply mb-4 block font-display text-[13px] font-semibold uppercase tracking-[1.6px] text-ink;
+  }
+  .eyebrow-light {
+    @apply text-white/75;
+  }
+
+  /* h2 scale from the reference: ~57px desktop */
+  .display-1 {
+    @apply font-display text-[42px] font-semibold tracking-tightest sm:text-[54px] lg:text-[68px];
+    line-height: 1.08;
+  }
+  .display-2 {
+    @apply font-display text-[32px] font-semibold tracking-tightest sm:text-[42px] lg:text-[57px];
+    line-height: 1.12;
+  }
+  .display-3 {
+    @apply font-display text-[24px] font-semibold tracking-tightest sm:text-[28px] lg:text-[35px];
+    line-height: 1.15;
+  }
+
+  .section {
+    @apply py-[70px] lg:py-[110px];
+  }
+
+  .link-line {
+    @apply relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0
+           after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Oversized ghost word used behind the hero and newsletter blocks */
+  .ghost-word {
+    @apply pointer-events-none select-none font-display font-semibold tracking-tightest;
+    line-height: 0.78;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Unifies portrait stock into a consistent squad look */
+  .squad-photo {
+    filter: grayscale(0.35) contrast(1.06) brightness(0.95);
+    transition: filter .5s ease, transform .7s ease;
+  }
+  .group:hover .squad-photo {
+    filter: grayscale(0) contrast(1.02) brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
