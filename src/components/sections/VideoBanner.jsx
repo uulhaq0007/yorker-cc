@@ -25,7 +25,7 @@ export default function VideoBanner() {
     <>
       <section className="relative h-[420px] overflow-hidden lg:h-[540px]">
         <img
-          src="/images/video-banner.jpg"
+          src={`${import.meta.env.BASE_URL}images/video-banner.jpg`}
           alt="Fielders set for the next delivery at Ashfield Oval"
           className="h-full w-full object-cover"
           loading="lazy"

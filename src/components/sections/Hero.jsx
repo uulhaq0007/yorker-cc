@@ -79,7 +79,7 @@ export default function Hero() {
               <Link to={`/news/${feature.slug}`} className="group block">
                 <div className="overflow-hidden">
                   <img
-                    src="/images/recent-post.jpg"
+                    src={`${import.meta.env.BASE_URL}images/recent-post.jpg`}
                     alt={feature.title}
                     className="h-[230px] w-full object-cover transition-transform duration-[900ms] group-hover:scale-105"
                     loading="lazy"

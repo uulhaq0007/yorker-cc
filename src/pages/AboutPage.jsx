@@ -25,7 +25,7 @@ export default function AboutPage() {
             <Reveal>
               <div className="relative">
                 <img
-                  src="/images/feature.jpg"
+                  src={`${import.meta.env.BASE_URL}images/feature.jpg`}
                   alt="Cricket kit laid out before a match at the Oval"
                   className="h-[460px] w-full object-cover"
                   loading="lazy"

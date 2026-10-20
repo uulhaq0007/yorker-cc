@@ -5,7 +5,7 @@ export default function WelcomeBanner() {
   return (
     <section className="relative overflow-hidden">
       <img
-        src="/images/welcome.jpg"
+        src={`${import.meta.env.BASE_URL}images/welcome.jpg`}
         alt=""
         aria-hidden="true"
         className="h-[460px] w-full object-cover lg:h-[540px]"

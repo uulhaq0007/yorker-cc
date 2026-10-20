@@ -86,14 +86,14 @@ export const stats = [
 ]
 
 export const squad = [
-  { no: 7,  name: 'Idris Fenwick',   role: 'Captain / Batter',  image: '/images/player-1.jpg', bats: 'Right', bowls: 'Off spin',   matches: 148, runs: 4820 },
-  { no: 12, name: 'Owen Delacroix',  role: 'Fast Bowler',       image: '/images/player-2.jpg', bats: 'Left',  bowls: 'Right fast', matches: 96,  runs: 610 },
-  { no: 4,  name: 'Rosa Whitlam',    role: 'All-rounder',       image: '/images/player-3.jpg', bats: 'Right', bowls: 'Leg spin',   matches: 112, runs: 2740 },
-  { no: 21, name: 'Nadia Berrick',   role: 'Wicketkeeper',      image: '/images/player-4.jpg', bats: 'Right', bowls: '—',          matches: 87,  runs: 1985 },
-  { no: 9,  name: 'Gerald Ainsworth',role: 'Opening Batter',    image: '/images/player-5.jpg', bats: 'Left',  bowls: 'Medium',     matches: 203, runs: 7310 },
-  { no: 33, name: 'Camille Okonjo',  role: 'Spin Bowler',       image: '/images/player-6.jpg', bats: 'Right', bowls: 'Left spin',  matches: 74,  runs: 480 },
-  { no: 18, name: 'Marta Sundqvist', role: 'Middle Order',      image: '/images/player-7.jpg', bats: 'Right', bowls: 'Medium',     matches: 129, runs: 3560 },
-  { no: 5,  name: 'Priya Vasanth',   role: 'All-rounder',       image: '/images/player-8.jpg', bats: 'Left',  bowls: 'Right fast', matches: 91,  runs: 2210 },
+  { no: 7,  name: 'Idris Fenwick',   role: 'Captain / Batter',  image: `${import.meta.env.BASE_URL}images/player-1.jpg`, bats: 'Right', bowls: 'Off spin',   matches: 148, runs: 4820 },
+  { no: 12, name: 'Owen Delacroix',  role: 'Fast Bowler',       image: `${import.meta.env.BASE_URL}images/player-2.jpg`, bats: 'Left',  bowls: 'Right fast', matches: 96,  runs: 610 },
+  { no: 4,  name: 'Rosa Whitlam',    role: 'All-rounder',       image: `${import.meta.env.BASE_URL}images/player-3.jpg`, bats: 'Right', bowls: 'Leg spin',   matches: 112, runs: 2740 },
+  { no: 21, name: 'Nadia Berrick',   role: 'Wicketkeeper',      image: `${import.meta.env.BASE_URL}images/player-4.jpg`, bats: 'Right', bowls: '—',          matches: 87,  runs: 1985 },
+  { no: 9,  name: 'Gerald Ainsworth',role: 'Opening Batter',    image: `${import.meta.env.BASE_URL}images/player-5.jpg`, bats: 'Left',  bowls: 'Medium',     matches: 203, runs: 7310 },
+  { no: 33, name: 'Camille Okonjo',  role: 'Spin Bowler',       image: `${import.meta.env.BASE_URL}images/player-6.jpg`, bats: 'Right', bowls: 'Left spin',  matches: 74,  runs: 480 },
+  { no: 18, name: 'Marta Sundqvist', role: 'Middle Order',      image: `${import.meta.env.BASE_URL}images/player-7.jpg`, bats: 'Right', bowls: 'Medium',     matches: 129, runs: 3560 },
+  { no: 5,  name: 'Priya Vasanth',   role: 'All-rounder',       image: `${import.meta.env.BASE_URL}images/player-8.jpg`, bats: 'Left',  bowls: 'Right fast', matches: 91,  runs: 2210 },
 ]
 
 export const trending = {
@@ -104,26 +104,26 @@ export const trending = {
     title: 'The run chase that turned Ashfield into a fortress',
     excerpt:
       'Thirty-eight needed off eighteen, two wickets standing and a crowd that would not sit down. How the middle order held its nerve at the Oval.',
-    image: '/images/trending-main.jpg',
+    image: `${import.meta.env.BASE_URL}images/trending-main.jpg`,
     likes: 214, comments: 18,
   },
   side: [
-    { slug: 'reading-the-seam', category: 'Coaching', date: 'Aug 21, 2026', title: 'Reading the seam: what quick bowlers watch for', image: '/images/trending-1.jpg' },
-    { slug: 'chasing-under-lights', category: 'Analysis', date: 'Aug 19, 2026', title: 'Why chasing under lights is a different sport', image: '/images/trending-2.jpg' },
-    { slug: 'square-that-drains', category: 'Groundskeeping', date: 'Aug 15, 2026', title: 'Building a square that drains in forty minutes', image: '/images/trending-3.jpg' },
+    { slug: 'reading-the-seam', category: 'Coaching', date: 'Aug 21, 2026', title: 'Reading the seam: what quick bowlers watch for', image: `${import.meta.env.BASE_URL}images/trending-1.jpg` },
+    { slug: 'chasing-under-lights', category: 'Analysis', date: 'Aug 19, 2026', title: 'Why chasing under lights is a different sport', image: `${import.meta.env.BASE_URL}images/trending-2.jpg` },
+    { slug: 'square-that-drains', category: 'Groundskeeping', date: 'Aug 15, 2026', title: 'Building a square that drains in forty minutes', image: `${import.meta.env.BASE_URL}images/trending-3.jpg` },
   ],
 }
 
 export const news = [
-  { slug: 'ashfield-run-chase',   category: 'Match Report', date: 'Aug 24, 2026', comments: 18, title: 'The run chase that turned Ashfield into a fortress', image: '/images/news-1.jpg',
+  { slug: 'ashfield-run-chase',   category: 'Match Report', date: 'Aug 24, 2026', comments: 18, title: 'The run chase that turned Ashfield into a fortress', image: `${import.meta.env.BASE_URL}images/news-1.jpg`,
     excerpt: 'Thirty-eight needed off eighteen, two wickets standing and a crowd that would not sit down.' },
-  { slug: 'academy-intake-2027',  category: 'Academy',      date: 'Aug 20, 2026', comments: 6,  title: 'Academy opens winter intake for under-17 seamers',   image: '/images/news-2.jpg',
+  { slug: 'academy-intake-2027',  category: 'Academy',      date: 'Aug 20, 2026', comments: 6,  title: 'Academy opens winter intake for under-17 seamers',   image: `${import.meta.env.BASE_URL}images/news-2.jpg`,
     excerpt: 'Twenty-four places, eight weeks of indoor work and a pathway that has fed the first XI for a decade.' },
-  { slug: 'keeping-standards',    category: 'Coaching',     date: 'Aug 16, 2026', comments: 11, title: 'Keeping standards: the drills behind clean hands',   image: '/images/news-3.jpg',
+  { slug: 'keeping-standards',    category: 'Coaching',     date: 'Aug 16, 2026', comments: 11, title: 'Keeping standards: the drills behind clean hands',   image: `${import.meta.env.BASE_URL}images/news-3.jpg`,
     excerpt: 'Our wicketkeeping coach breaks down the four drills every glovesman repeats before a match day.' },
-  { slug: 'floodlit-fixtures',    category: 'Club News',    date: 'Aug 12, 2026', comments: 3,  title: 'Floodlit fixtures confirmed for the autumn block',  image: '/images/news-4.jpg',
+  { slug: 'floodlit-fixtures',    category: 'Club News',    date: 'Aug 12, 2026', comments: 3,  title: 'Floodlit fixtures confirmed for the autumn block',  image: `${import.meta.env.BASE_URL}images/news-4.jpg`,
     excerpt: 'Three evening games join the calendar as the county signs off on the new lighting rig at the Oval.' },
-  { slug: 'volunteers-weekend',   category: 'Community',    date: 'Aug 08, 2026', comments: 9,  title: 'The volunteers who get the Oval ready every weekend', image: '/images/news-5.jpg',
+  { slug: 'volunteers-weekend',   category: 'Community',    date: 'Aug 08, 2026', comments: 9,  title: 'The volunteers who get the Oval ready every weekend', image: `${import.meta.env.BASE_URL}images/news-5.jpg`,
     excerpt: 'Rollers at six, teas at eleven, sightscreens by noon. Meet the people the fixture list depends on.' },
 ]
 
@@ -133,17 +133,17 @@ export const partners = [
 ]
 
 export const gallery = [
-  { image: '/images/gallery-1.jpg', count: '2.8k' },
-  { image: '/images/gallery-2.jpg', count: '1.4k' },
-  { image: '/images/gallery-3.jpg', count: '3.1k' },
-  { image: '/images/gallery-4.jpg', count: '947' },
-  { image: '/images/gallery-5.jpg', count: '2.2k' },
-  { image: '/images/gallery-6.jpg', count: '1.9k' },
+  { image: `${import.meta.env.BASE_URL}images/gallery-1.jpg`, count: '2.8k' },
+  { image: `${import.meta.env.BASE_URL}images/gallery-2.jpg`, count: '1.4k' },
+  { image: `${import.meta.env.BASE_URL}images/gallery-3.jpg`, count: '3.1k' },
+  { image: `${import.meta.env.BASE_URL}images/gallery-4.jpg`, count: '947' },
+  { image: `${import.meta.env.BASE_URL}images/gallery-5.jpg`, count: '2.2k' },
+  { image: `${import.meta.env.BASE_URL}images/gallery-6.jpg`, count: '1.9k' },
 ]
 
 export const heroSlides = [
   {
-    image: '/images/hero-1.jpg',
+    image: `${import.meta.env.BASE_URL}images/hero-1.jpg`,
     eyebrow: 'Matchday',
     title: 'Detailed match reports & live scoring',
     text: 'Every ball logged, every innings written up before the covers come on. Follow the first XI through the Meridian Premier League.',
@@ -151,7 +151,7 @@ export const heroSlides = [
     ghost: 'Cricket',
   },
   {
-    image: '/images/hero-2.jpg',
+    image: `${import.meta.env.BASE_URL}images/hero-2.jpg`,
     eyebrow: 'Season 2026',
     title: 'Four wins from five at the top of the table',
     text: 'A young side, a fast outfield and the best home record in the division. There has never been a better season to join us at the Oval.',

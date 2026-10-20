@@ -4,7 +4,7 @@ export default function PageBanner({ title, crumbs = [], ghost }) {
   return (
     <section className="relative overflow-hidden bg-night py-24 lg:py-32">
       <img
-        src="/images/page-banner.jpg"
+        src={`${import.meta.env.BASE_URL}images/page-banner.jpg`}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-30"
